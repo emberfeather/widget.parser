@@ -1,0 +1,138 @@
+<?xml version="1.0"?>
+<project name="widget.parser" default="testGUnit" basedir=".">
+	<!-- Include the property files -->
+	<property file="${basedir}${file.separator}build${file.separator}user.properties"/>
+	<property file="${basedir}${file.separator}build${file.separator}project.properties"/>
+	<property file="${basedir}${file.separator}build${file.separator}version.properties"/>
+	<property file="${basedir}${file.separator}build${file.separator}build.properties"/>
+	
+	<target name="prepare">
+		<echo message="Starting: Environment Preparation"/>
+		
+		<!-- Make the distribution directory -->
+		<mkdir dir="${build.dist}" />
+		
+		<!-- Create a property for the distribution bin -->
+		<property name="build.dist.bin" value="${build.dist}${file.separator}bin"/>
+		
+		<!-- Create a property for the package -->
+		<property name="build.dist.package" value="org${file.separator}emberfeather${file.separator}widget"/>
+		
+		<!-- Make the distribution bin directory -->
+		<mkdir dir="${build.dist.bin}${file.separator}src" />
+		<mkdir dir="${build.dist.bin}${file.separator}test" />
+		<mkdir dir="${build.dist.bin}${file.separator}test${file.separator}${build.dist.package}" />
+		
+		<!-- Create a property for the distribution junit tests -->
+		<property name="build.dist.unit" value="${build.dist}${file.separator}unit"/>
+		
+		<!-- Make the test report output directory -->
+		<mkdir dir="${build.dist.unit}" />
+		
+		<!-- Make the log directory -->
+		<mkdir dir="${build.logs}" />
+		
+		<!-- Define log file -->
+		<record name="${build.logs}${file.separator}ant.log" />
+		
+		<!-- Create the time stamp -->
+		<tstamp>
+			<format property="build.date" timezone="UTC" pattern="MM/dd/yy hh:mmaa" />
+		</tstamp>
+		
+		<!-- Combine the version parts into full version identifier -->
+		<property name="project.version" value="${project.version.major}.${project.version.minor}.${project.version.build}"/>
+		
+		<!-- Create the paths -->
+		<path id="classpath.lib">
+			<pathelement location="lib${file.separator}antlr-3.2.jar"/>
+			<pathelement location="lib${file.separator}junit-4.8.2.jar"/>
+		</path>
+		
+		<path id="classpath.bin.src">
+			<pathelement path="${build.dist.bin}${file.separator}src"/>
+		</path>
+		
+		<path id="classpath.bin.test">
+			<pathelement path="${build.dist.bin}${file.separator}test"/>
+		</path>
+		
+		<echo message="Finished: Environment Preparation"/>
+	</target>
+	
+	<target name="compileSrc" depends="prepare">
+		<echo message="Starting: Compilation"/>
+		
+		<!-- Compile all the src files -->
+		<javac srcdir="src" destdir="${build.dist.bin}${file.separator}src">
+			<classpath refid="classpath.lib"/>
+		</javac>
+		
+		<echo message="Finished: Compilation"/>
+	</target>
+	
+	<target name="compileTest" depends="compileSrc">
+		<echo message="Starting: Compilation"/>
+		
+		<!-- Compile all the generated test files -->
+		<javac srcdir="${build.dist.bin}${file.separator}src" destdir="${build.dist.bin}${file.separator}src">
+			<classpath refid="classpath.lib"/>
+			<classpath refid="classpath.bin.src"/>
+		</javac>
+		
+		<!-- Compile all the test files -->
+		<javac srcdir="src" destdir="${build.dist.bin}${file.separator}src">
+			<classpath refid="classpath.lib"/>
+			<classpath refid="classpath.bin.src"/>
+		</javac>
+		
+		<echo message="Finished: Compilation"/>
+	</target>
+	
+	<target name="generateTests" depends="compileSrc">
+		<echo message="Starting: Generate Tests"/>
+		
+		<!-- Generate the jUnit test files from the gUnit tests -->
+		<java classname="org.antlr.gunit.Interp" dir="src${file.separator}${build.dist.package}" fork="true">
+			<classpath refid="classpath.lib"/>
+			<classpath refid="classpath.bin.src"/>
+			
+			<arg value="-o"/>
+			
+			<arg value="widget.gunit"/>
+		</java>
+		
+		<echo message="Finished: Generate Tests"/>
+	</target>
+	
+	<target name="testGUnit" depends="compileSrc" description="Runs the gUnit tests">
+		<echo message="Starting: gUnit Tests"/>
+
+		<!-- Run the tests for the widget -->
+		<java classname="org.antlr.gunit.Interp">
+			<classpath refid="classpath.lib"/>
+			<classpath refid="classpath.bin.src"/>
+			
+			<arg value="src${file.separator}${build.dist.package}${file.separator}widget.gunit"/>
+		</java>
+		
+		<echo message="Finished: gUnit Tests"/>
+	</target>
+	
+	<target name="testJUnit" depends="generateTests,compileTest" description="Runs the jUnit tests">
+		<echo message="Starting: jUnit Tests"/>
+		
+		<junit>
+			<classpath refid="classpath.lib"/>
+			<classpath refid="classpath.bin.src"/>
+			
+			<formatter type="xml"/>
+			
+			<batchtest todir="${build.dist.unit}">
+				<fileset dir="${build.dist.bin}${file.separator}src" includes="**${file.separator}Test*.class" />
+			</batchtest>
+		</junit>
+		
+		<echo message="Finished: jUnit Tests"/>
+	</target>
+</project>
