@@ -16,4 +16,3 @@ widget:
 "[plugin:widget { test: true } /]" OK // Simple true argument
 "[plugin:widget]content[/]" OK // Normal widget with content
 "[plugin:widget { test: true }]content[/]" OK // Normal widget with content
-"[plugin:widget][plugin:widget/][/]" OK // Nested widget
