@@ -13,21 +13,20 @@ options {
 }
 
 document:
-	anything widget anything (widget anything)*
+	widget
 	;
 
 widget:
-	'[' ID ':' ID WS? (arguments WS?)? '/]'
-	'[' ID ':' ID WS? (arguments WS?)? ']' content '[/]'
+	'[' ID ':' ID (WS)? (arguments (WS)?)? '/]'
+	| '[' ID ':' ID (WS)? (arguments (WS)?)? ']' content '[/]'
 	;
 
 arguments:
-	'{' WS ( ', '? arg )* WS '}'
-	| '{}'
+	'{' (WS)? ((',')? (WS)? arg )* (WS)? '}'
 	;
 
 arg:
-	ID ':' WS value
+	ID ':' (WS)? value
 	;
 
 value:
@@ -38,11 +37,8 @@ value:
 	;
 
 content:
-	.+
-	;
-
-anything:	
-	( options {greedy=false;} : . )*
+	widget
+	| .*
 	;
 
 /** Match various string types.  Note that greedy=false implies '
@@ -54,13 +50,14 @@ STRING:
 	;
 
 ID:
-	('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'0'..'9'|'_')*
+	('a'..'z'|'A'..'Z'|'_')('a'..'z'|'A'..'Z'|'0'..'9'|'_')*
 	;
 
 WS:
 	( ' '
 		| '\t'
 		| '\r'
+		| '\u000C'
 		| '\n'
 	) {$channel=HIDDEN;}
 	;
