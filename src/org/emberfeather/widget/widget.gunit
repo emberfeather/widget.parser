@@ -1,18 +1,40 @@
 gunit widget;
 
 @header {
-	package org.emberfeather.widget;
+  package org.emberfeather.widget;
 }
 
 // Test Rule: Variable closing
 widget:
-"[plugin:widget/]" OK // Normal vanilla widget
-"[plugin:widget /]" OK // Normal vanilla widget with space
-"[plugin:widget { test: 'ok' } /]" OK // Simple string argument
-"[plugin:widget { test: \"ok\" } /]" OK // Simple string argument
-"[plugin:widget { test: 42 } /]" OK // Simple numeric argument
-"[plugin:widget { test: 24.42 } /]" OK // Simple decimal argument
-"[plugin:widget { test: false } /]" OK // Simple false argument
-"[plugin:widget { test: true } /]" OK // Simple true argument
-"[plugin:widget]content[/]" OK // Normal widget with content
-"[plugin:widget { test: true }]content[/]" OK // Normal widget with content
+	// Normal vanilla widget
+	"[plugin:func/]" -> "[ plugin : func /]"
+	
+	// Normal vanilla widget with space
+	"[plugin:widget /]" -> "[ plugin : widget /]"
+	
+	// Simple string argument
+	"[plugin:widget { test: 'ok' } /]" -> "[ plugin : widget { test : 'ok' } /]"
+	
+	// Simple string argument
+	"[plugin:widget { test: \"ok\" } /]" -> "[ plugin : widget { test : \"ok\" } /]"
+	
+	// Simple numeric argument
+	"[plugin:widget { test: 42 } /]" -> "[ plugin : widget { test : 42 } /]"
+	
+	// Simple decimal argument
+	"[plugin:widget { test: 24.42 } /]" -> "[ plugin : widget { test : 24.42 } /]"
+	
+	// Simple false argument
+	"[plugin:widget { test: false } /]" -> "[ plugin : widget { test : false } /]"
+	
+	// Simple true argument
+	"[plugin:widget { test: true } /]" -> "[ plugin : widget { test : true } /]"
+	
+	// Normal widget with content
+	"[plugin:widget]testing[/]" -> "[ plugin : widget ] testing [/]"
+	
+	// Normal widget with content
+	"[plugin:widget { test: true }]testing[/]" -> "[ plugin : widget { test : true } ] testing [/]"
+	
+	// Normal widget with content
+	"[plugin:widget { test: true }][plugin:widget/][/]" -> "[ plugin : widget { test : true } ] [ plugin : widget /] [/]"
