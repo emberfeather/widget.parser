@@ -16,7 +16,7 @@ widget:
 	"[plugin:widget { test: 'ok' } /]" -> "[ plugin : widget { test : 'ok' } /]"
 	
 	// Simple string argument
-	"[plugin:widget { test: \"ok\" } /]" -> "[ plugin : widget { test : \"ok\" } /]"
+	//"[plugin:widget { test: \"ok\" } /]" -> "[ plugin : widget { test : \"ok\" } /]"]
 	
 	// Simple numeric argument
 	"[plugin:widget { test: 42 } /]" -> "[ plugin : widget { test : 42 } /]"
