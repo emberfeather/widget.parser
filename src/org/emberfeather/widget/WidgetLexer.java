@@ -1,4 +1,4 @@
-// $ANTLR 3.3 Nov 30, 2010 12:45:30 /home/randy/Projects/widget.parser/classes/widget.g 2011-03-02 14:52:17
+// $ANTLR 3.3 Nov 30, 2010 12:45:30 /home/randy/Projects/widget.parser/Widget.g 2011-03-02 16:22:20
 
 	package org.emberfeather.widget;
 
@@ -8,7 +8,7 @@ import java.util.Stack;
 import java.util.List;
 import java.util.ArrayList;
 
-public class widgetLexer extends Lexer {
+public class WidgetLexer extends Lexer {
     public static final int EOF=-1;
     public static final int T__9=9;
     public static final int T__10=10;
@@ -29,23 +29,23 @@ public class widgetLexer extends Lexer {
     // delegates
     // delegators
 
-    public widgetLexer() {;} 
-    public widgetLexer(CharStream input) {
+    public WidgetLexer() {;} 
+    public WidgetLexer(CharStream input) {
         this(input, new RecognizerSharedState());
     }
-    public widgetLexer(CharStream input, RecognizerSharedState state) {
+    public WidgetLexer(CharStream input, RecognizerSharedState state) {
         super(input,state);
 
     }
-    public String getGrammarFileName() { return "/home/randy/Projects/widget.parser/classes/widget.g"; }
+    public String getGrammarFileName() { return "/home/randy/Projects/widget.parser/Widget.g"; }
 
     // $ANTLR start "T__9"
     public final void mT__9() throws RecognitionException {
         try {
             int _type = T__9;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/randy/Projects/widget.parser/classes/widget.g:7:6: ( '[' )
-            // /home/randy/Projects/widget.parser/classes/widget.g:7:8: '['
+            // /home/randy/Projects/widget.parser/Widget.g:7:6: ( '[' )
+            // /home/randy/Projects/widget.parser/Widget.g:7:8: '['
             {
             match('['); 
 
@@ -64,8 +64,8 @@ public class widgetLexer extends Lexer {
         try {
             int _type = T__10;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/randy/Projects/widget.parser/classes/widget.g:8:7: ( ':' )
-            // /home/randy/Projects/widget.parser/classes/widget.g:8:9: ':'
+            // /home/randy/Projects/widget.parser/Widget.g:8:7: ( ':' )
+            // /home/randy/Projects/widget.parser/Widget.g:8:9: ':'
             {
             match(':'); 
 
@@ -84,8 +84,8 @@ public class widgetLexer extends Lexer {
         try {
             int _type = T__11;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/randy/Projects/widget.parser/classes/widget.g:9:7: ( '/]' )
-            // /home/randy/Projects/widget.parser/classes/widget.g:9:9: '/]'
+            // /home/randy/Projects/widget.parser/Widget.g:9:7: ( '/]' )
+            // /home/randy/Projects/widget.parser/Widget.g:9:9: '/]'
             {
             match("/]"); 
 
@@ -105,8 +105,8 @@ public class widgetLexer extends Lexer {
         try {
             int _type = T__12;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/randy/Projects/widget.parser/classes/widget.g:10:7: ( ']' )
-            // /home/randy/Projects/widget.parser/classes/widget.g:10:9: ']'
+            // /home/randy/Projects/widget.parser/Widget.g:10:7: ( ']' )
+            // /home/randy/Projects/widget.parser/Widget.g:10:9: ']'
             {
             match(']'); 
 
@@ -125,8 +125,8 @@ public class widgetLexer extends Lexer {
         try {
             int _type = T__13;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/randy/Projects/widget.parser/classes/widget.g:11:7: ( '[/]' )
-            // /home/randy/Projects/widget.parser/classes/widget.g:11:9: '[/]'
+            // /home/randy/Projects/widget.parser/Widget.g:11:7: ( '[/]' )
+            // /home/randy/Projects/widget.parser/Widget.g:11:9: '[/]'
             {
             match("[/]"); 
 
@@ -146,8 +146,8 @@ public class widgetLexer extends Lexer {
         try {
             int _type = T__14;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/randy/Projects/widget.parser/classes/widget.g:12:7: ( '{' )
-            // /home/randy/Projects/widget.parser/classes/widget.g:12:9: '{'
+            // /home/randy/Projects/widget.parser/Widget.g:12:7: ( '{' )
+            // /home/randy/Projects/widget.parser/Widget.g:12:9: '{'
             {
             match('{'); 
 
@@ -166,8 +166,8 @@ public class widgetLexer extends Lexer {
         try {
             int _type = T__15;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/randy/Projects/widget.parser/classes/widget.g:13:7: ( ',' )
-            // /home/randy/Projects/widget.parser/classes/widget.g:13:9: ','
+            // /home/randy/Projects/widget.parser/Widget.g:13:7: ( ',' )
+            // /home/randy/Projects/widget.parser/Widget.g:13:9: ','
             {
             match(','); 
 
@@ -186,8 +186,8 @@ public class widgetLexer extends Lexer {
         try {
             int _type = T__16;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/randy/Projects/widget.parser/classes/widget.g:14:7: ( '}' )
-            // /home/randy/Projects/widget.parser/classes/widget.g:14:9: '}'
+            // /home/randy/Projects/widget.parser/Widget.g:14:7: ( '}' )
+            // /home/randy/Projects/widget.parser/Widget.g:14:9: '}'
             {
             match('}'); 
 
@@ -206,8 +206,8 @@ public class widgetLexer extends Lexer {
         try {
             int _type = T__17;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/randy/Projects/widget.parser/classes/widget.g:15:7: ( 'true' )
-            // /home/randy/Projects/widget.parser/classes/widget.g:15:9: 'true'
+            // /home/randy/Projects/widget.parser/Widget.g:15:7: ( 'true' )
+            // /home/randy/Projects/widget.parser/Widget.g:15:9: 'true'
             {
             match("true"); 
 
@@ -227,8 +227,8 @@ public class widgetLexer extends Lexer {
         try {
             int _type = T__18;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/randy/Projects/widget.parser/classes/widget.g:16:7: ( 'false' )
-            // /home/randy/Projects/widget.parser/classes/widget.g:16:9: 'false'
+            // /home/randy/Projects/widget.parser/Widget.g:16:7: ( 'false' )
+            // /home/randy/Projects/widget.parser/Widget.g:16:9: 'false'
             {
             match("false"); 
 
@@ -248,7 +248,7 @@ public class widgetLexer extends Lexer {
         try {
             int _type = STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/randy/Projects/widget.parser/classes/widget.g:47:7: ( '\\'' ( options {greedy=false; } : . )* '\\'' | '\"' ( options {greedy=false; } : . )* '\"' )
+            // /home/randy/Projects/widget.parser/Widget.g:47:7: ( '\\'' ( options {greedy=false; } : . )* '\\'' | '\"' ( options {greedy=false; } : . )* '\"' )
             int alt3=2;
             int LA3_0 = input.LA(1);
 
@@ -266,10 +266,10 @@ public class widgetLexer extends Lexer {
             }
             switch (alt3) {
                 case 1 :
-                    // /home/randy/Projects/widget.parser/classes/widget.g:48:2: '\\'' ( options {greedy=false; } : . )* '\\''
+                    // /home/randy/Projects/widget.parser/Widget.g:48:2: '\\'' ( options {greedy=false; } : . )* '\\''
                     {
                     match('\''); 
-                    // /home/randy/Projects/widget.parser/classes/widget.g:48:7: ( options {greedy=false; } : . )*
+                    // /home/randy/Projects/widget.parser/Widget.g:48:7: ( options {greedy=false; } : . )*
                     loop1:
                     do {
                         int alt1=2;
@@ -285,7 +285,7 @@ public class widgetLexer extends Lexer {
 
                         switch (alt1) {
                     	case 1 :
-                    	    // /home/randy/Projects/widget.parser/classes/widget.g:48:32: .
+                    	    // /home/randy/Projects/widget.parser/Widget.g:48:32: .
                     	    {
                     	    matchAny(); 
 
@@ -302,10 +302,10 @@ public class widgetLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // /home/randy/Projects/widget.parser/classes/widget.g:49:4: '\"' ( options {greedy=false; } : . )* '\"'
+                    // /home/randy/Projects/widget.parser/Widget.g:49:4: '\"' ( options {greedy=false; } : . )* '\"'
                     {
                     match('\"'); 
-                    // /home/randy/Projects/widget.parser/classes/widget.g:49:8: ( options {greedy=false; } : . )*
+                    // /home/randy/Projects/widget.parser/Widget.g:49:8: ( options {greedy=false; } : . )*
                     loop2:
                     do {
                         int alt2=2;
@@ -321,7 +321,7 @@ public class widgetLexer extends Lexer {
 
                         switch (alt2) {
                     	case 1 :
-                    	    // /home/randy/Projects/widget.parser/classes/widget.g:49:33: .
+                    	    // /home/randy/Projects/widget.parser/Widget.g:49:33: .
                     	    {
                     	    matchAny(); 
 
@@ -352,8 +352,8 @@ public class widgetLexer extends Lexer {
         try {
             int _type = ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/randy/Projects/widget.parser/classes/widget.g:52:3: ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )* )
-            // /home/randy/Projects/widget.parser/classes/widget.g:53:2: ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
+            // /home/randy/Projects/widget.parser/Widget.g:52:3: ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )* )
+            // /home/randy/Projects/widget.parser/Widget.g:53:2: ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
             {
             if ( (input.LA(1)>='A' && input.LA(1)<='Z')||input.LA(1)=='_'||(input.LA(1)>='a' && input.LA(1)<='z') ) {
                 input.consume();
@@ -364,7 +364,7 @@ public class widgetLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // /home/randy/Projects/widget.parser/classes/widget.g:53:25: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
+            // /home/randy/Projects/widget.parser/Widget.g:53:25: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
             loop4:
             do {
                 int alt4=2;
@@ -377,7 +377,7 @@ public class widgetLexer extends Lexer {
 
                 switch (alt4) {
             	case 1 :
-            	    // /home/randy/Projects/widget.parser/classes/widget.g:
+            	    // /home/randy/Projects/widget.parser/Widget.g:
             	    {
             	    if ( (input.LA(1)>='0' && input.LA(1)<='9')||(input.LA(1)>='A' && input.LA(1)<='Z')||input.LA(1)=='_'||(input.LA(1)>='a' && input.LA(1)<='z') ) {
             	        input.consume();
@@ -413,8 +413,8 @@ public class widgetLexer extends Lexer {
         try {
             int _type = WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/randy/Projects/widget.parser/classes/widget.g:56:3: ( ( ' ' | '\\t' | '\\r' | '\\u000C' | '\\n' ) )
-            // /home/randy/Projects/widget.parser/classes/widget.g:57:2: ( ' ' | '\\t' | '\\r' | '\\u000C' | '\\n' )
+            // /home/randy/Projects/widget.parser/Widget.g:56:3: ( ( ' ' | '\\t' | '\\r' | '\\u000C' | '\\n' ) )
+            // /home/randy/Projects/widget.parser/Widget.g:57:2: ( ' ' | '\\t' | '\\r' | '\\u000C' | '\\n' )
             {
             if ( (input.LA(1)>='\t' && input.LA(1)<='\n')||(input.LA(1)>='\f' && input.LA(1)<='\r')||input.LA(1)==' ' ) {
                 input.consume();
@@ -442,10 +442,10 @@ public class widgetLexer extends Lexer {
         try {
             int _type = INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/randy/Projects/widget.parser/classes/widget.g:65:4: ( ( '0' .. '9' )+ )
-            // /home/randy/Projects/widget.parser/classes/widget.g:66:2: ( '0' .. '9' )+
+            // /home/randy/Projects/widget.parser/Widget.g:65:4: ( ( '0' .. '9' )+ )
+            // /home/randy/Projects/widget.parser/Widget.g:66:2: ( '0' .. '9' )+
             {
-            // /home/randy/Projects/widget.parser/classes/widget.g:66:2: ( '0' .. '9' )+
+            // /home/randy/Projects/widget.parser/Widget.g:66:2: ( '0' .. '9' )+
             int cnt5=0;
             loop5:
             do {
@@ -459,7 +459,7 @@ public class widgetLexer extends Lexer {
 
                 switch (alt5) {
             	case 1 :
-            	    // /home/randy/Projects/widget.parser/classes/widget.g:66:2: '0' .. '9'
+            	    // /home/randy/Projects/widget.parser/Widget.g:66:2: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -491,14 +491,14 @@ public class widgetLexer extends Lexer {
         try {
             int _type = FLOAT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/randy/Projects/widget.parser/classes/widget.g:69:6: ( ( '0' .. '9' )+ '.' ( '0' .. '9' )* | '.' ( '0' .. '9' )+ | ( '0' .. '9' )+ )
+            // /home/randy/Projects/widget.parser/Widget.g:69:6: ( ( '0' .. '9' )+ '.' ( '0' .. '9' )* | '.' ( '0' .. '9' )+ | ( '0' .. '9' )+ )
             int alt10=3;
             alt10 = dfa10.predict(input);
             switch (alt10) {
                 case 1 :
-                    // /home/randy/Projects/widget.parser/classes/widget.g:70:2: ( '0' .. '9' )+ '.' ( '0' .. '9' )*
+                    // /home/randy/Projects/widget.parser/Widget.g:70:2: ( '0' .. '9' )+ '.' ( '0' .. '9' )*
                     {
-                    // /home/randy/Projects/widget.parser/classes/widget.g:70:2: ( '0' .. '9' )+
+                    // /home/randy/Projects/widget.parser/Widget.g:70:2: ( '0' .. '9' )+
                     int cnt6=0;
                     loop6:
                     do {
@@ -512,7 +512,7 @@ public class widgetLexer extends Lexer {
 
                         switch (alt6) {
                     	case 1 :
-                    	    // /home/randy/Projects/widget.parser/classes/widget.g:70:3: '0' .. '9'
+                    	    // /home/randy/Projects/widget.parser/Widget.g:70:3: '0' .. '9'
                     	    {
                     	    matchRange('0','9'); 
 
@@ -529,7 +529,7 @@ public class widgetLexer extends Lexer {
                     } while (true);
 
                     match('.'); 
-                    // /home/randy/Projects/widget.parser/classes/widget.g:70:18: ( '0' .. '9' )*
+                    // /home/randy/Projects/widget.parser/Widget.g:70:18: ( '0' .. '9' )*
                     loop7:
                     do {
                         int alt7=2;
@@ -542,7 +542,7 @@ public class widgetLexer extends Lexer {
 
                         switch (alt7) {
                     	case 1 :
-                    	    // /home/randy/Projects/widget.parser/classes/widget.g:70:19: '0' .. '9'
+                    	    // /home/randy/Projects/widget.parser/Widget.g:70:19: '0' .. '9'
                     	    {
                     	    matchRange('0','9'); 
 
@@ -558,10 +558,10 @@ public class widgetLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // /home/randy/Projects/widget.parser/classes/widget.g:71:4: '.' ( '0' .. '9' )+
+                    // /home/randy/Projects/widget.parser/Widget.g:71:4: '.' ( '0' .. '9' )+
                     {
                     match('.'); 
-                    // /home/randy/Projects/widget.parser/classes/widget.g:71:8: ( '0' .. '9' )+
+                    // /home/randy/Projects/widget.parser/Widget.g:71:8: ( '0' .. '9' )+
                     int cnt8=0;
                     loop8:
                     do {
@@ -575,7 +575,7 @@ public class widgetLexer extends Lexer {
 
                         switch (alt8) {
                     	case 1 :
-                    	    // /home/randy/Projects/widget.parser/classes/widget.g:71:9: '0' .. '9'
+                    	    // /home/randy/Projects/widget.parser/Widget.g:71:9: '0' .. '9'
                     	    {
                     	    matchRange('0','9'); 
 
@@ -595,9 +595,9 @@ public class widgetLexer extends Lexer {
                     }
                     break;
                 case 3 :
-                    // /home/randy/Projects/widget.parser/classes/widget.g:72:4: ( '0' .. '9' )+
+                    // /home/randy/Projects/widget.parser/Widget.g:72:4: ( '0' .. '9' )+
                     {
-                    // /home/randy/Projects/widget.parser/classes/widget.g:72:4: ( '0' .. '9' )+
+                    // /home/randy/Projects/widget.parser/Widget.g:72:4: ( '0' .. '9' )+
                     int cnt9=0;
                     loop9:
                     do {
@@ -611,7 +611,7 @@ public class widgetLexer extends Lexer {
 
                         switch (alt9) {
                     	case 1 :
-                    	    // /home/randy/Projects/widget.parser/classes/widget.g:72:5: '0' .. '9'
+                    	    // /home/randy/Projects/widget.parser/Widget.g:72:5: '0' .. '9'
                     	    {
                     	    matchRange('0','9'); 
 
@@ -641,110 +641,110 @@ public class widgetLexer extends Lexer {
     // $ANTLR end "FLOAT"
 
     public void mTokens() throws RecognitionException {
-        // /home/randy/Projects/widget.parser/classes/widget.g:1:8: ( T__9 | T__10 | T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | STRING | ID | WS | INT | FLOAT )
+        // /home/randy/Projects/widget.parser/Widget.g:1:8: ( T__9 | T__10 | T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | STRING | ID | WS | INT | FLOAT )
         int alt11=15;
         alt11 = dfa11.predict(input);
         switch (alt11) {
             case 1 :
-                // /home/randy/Projects/widget.parser/classes/widget.g:1:10: T__9
+                // /home/randy/Projects/widget.parser/Widget.g:1:10: T__9
                 {
                 mT__9(); 
 
                 }
                 break;
             case 2 :
-                // /home/randy/Projects/widget.parser/classes/widget.g:1:15: T__10
+                // /home/randy/Projects/widget.parser/Widget.g:1:15: T__10
                 {
                 mT__10(); 
 
                 }
                 break;
             case 3 :
-                // /home/randy/Projects/widget.parser/classes/widget.g:1:21: T__11
+                // /home/randy/Projects/widget.parser/Widget.g:1:21: T__11
                 {
                 mT__11(); 
 
                 }
                 break;
             case 4 :
-                // /home/randy/Projects/widget.parser/classes/widget.g:1:27: T__12
+                // /home/randy/Projects/widget.parser/Widget.g:1:27: T__12
                 {
                 mT__12(); 
 
                 }
                 break;
             case 5 :
-                // /home/randy/Projects/widget.parser/classes/widget.g:1:33: T__13
+                // /home/randy/Projects/widget.parser/Widget.g:1:33: T__13
                 {
                 mT__13(); 
 
                 }
                 break;
             case 6 :
-                // /home/randy/Projects/widget.parser/classes/widget.g:1:39: T__14
+                // /home/randy/Projects/widget.parser/Widget.g:1:39: T__14
                 {
                 mT__14(); 
 
                 }
                 break;
             case 7 :
-                // /home/randy/Projects/widget.parser/classes/widget.g:1:45: T__15
+                // /home/randy/Projects/widget.parser/Widget.g:1:45: T__15
                 {
                 mT__15(); 
 
                 }
                 break;
             case 8 :
-                // /home/randy/Projects/widget.parser/classes/widget.g:1:51: T__16
+                // /home/randy/Projects/widget.parser/Widget.g:1:51: T__16
                 {
                 mT__16(); 
 
                 }
                 break;
             case 9 :
-                // /home/randy/Projects/widget.parser/classes/widget.g:1:57: T__17
+                // /home/randy/Projects/widget.parser/Widget.g:1:57: T__17
                 {
                 mT__17(); 
 
                 }
                 break;
             case 10 :
-                // /home/randy/Projects/widget.parser/classes/widget.g:1:63: T__18
+                // /home/randy/Projects/widget.parser/Widget.g:1:63: T__18
                 {
                 mT__18(); 
 
                 }
                 break;
             case 11 :
-                // /home/randy/Projects/widget.parser/classes/widget.g:1:69: STRING
+                // /home/randy/Projects/widget.parser/Widget.g:1:69: STRING
                 {
                 mSTRING(); 
 
                 }
                 break;
             case 12 :
-                // /home/randy/Projects/widget.parser/classes/widget.g:1:76: ID
+                // /home/randy/Projects/widget.parser/Widget.g:1:76: ID
                 {
                 mID(); 
 
                 }
                 break;
             case 13 :
-                // /home/randy/Projects/widget.parser/classes/widget.g:1:79: WS
+                // /home/randy/Projects/widget.parser/Widget.g:1:79: WS
                 {
                 mWS(); 
 
                 }
                 break;
             case 14 :
-                // /home/randy/Projects/widget.parser/classes/widget.g:1:82: INT
+                // /home/randy/Projects/widget.parser/Widget.g:1:82: INT
                 {
                 mINT(); 
 
                 }
                 break;
             case 15 :
-                // /home/randy/Projects/widget.parser/classes/widget.g:1:86: FLOAT
+                // /home/randy/Projects/widget.parser/Widget.g:1:86: FLOAT
                 {
                 mFLOAT(); 
 

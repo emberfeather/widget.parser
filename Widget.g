@@ -1,4 +1,4 @@
-grammar widget;
+grammar Widget;
 
 options {
 	output=AST;

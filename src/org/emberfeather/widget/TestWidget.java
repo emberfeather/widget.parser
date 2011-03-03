@@ -2,17 +2,17 @@ package org.emberfeather.widget;
 
 import org.antlr.gunit.gUnitBaseTest;
 
-public class Testwidget extends gUnitBaseTest {
+public class TestWidget extends gUnitBaseTest {
 	
 	public void setUp() {
 		this.packagePath = "./org/emberfeather/widget";
-		this.lexerPath = "org.emberfeather.widget.widgetLexer";
-		this.parserPath = "org.emberfeather.widget.widgetParser";
+		this.lexerPath = "org.emberfeather.widget.WidgetLexer";
+		this.parserPath = "org.emberfeather.widget.WidgetParser";
 	}
 
 	public void testWidget1() throws Exception {
-		// gunit test on line 10
-		Object retval = execParser("widget", 10, "[plugin:func/]", false);
+		// gunit test on line 9
+		Object retval = execParser("widget", 9, "[plugin:func/]", false);
 		Object actual = examineExecResult(org.antlr.gunit.gUnitParser.STRING, retval);
 		Object expecting = "[ plugin : func /]";
 
@@ -20,8 +20,8 @@ public class Testwidget extends gUnitBaseTest {
 	}
 
 	public void testWidget2() throws Exception {
-		// gunit test on line 13
-		Object retval = execParser("widget", 13, "[plugin:widget /]", false);
+		// gunit test on line 12
+		Object retval = execParser("widget", 12, "[plugin:widget /]", false);
 		Object actual = examineExecResult(org.antlr.gunit.gUnitParser.STRING, retval);
 		Object expecting = "[ plugin : widget /]";
 
@@ -29,8 +29,8 @@ public class Testwidget extends gUnitBaseTest {
 	}
 
 	public void testWidget3() throws Exception {
-		// gunit test on line 16
-		Object retval = execParser("widget", 16, "[plugin:widget { test: 'ok' } /]", false);
+		// gunit test on line 15
+		Object retval = execParser("widget", 15, "[plugin:widget { test: 'ok' } /]", false);
 		Object actual = examineExecResult(org.antlr.gunit.gUnitParser.STRING, retval);
 		Object expecting = "[ plugin : widget { test : 'ok' } /]";
 
@@ -38,8 +38,8 @@ public class Testwidget extends gUnitBaseTest {
 	}
 
 	public void testWidget4() throws Exception {
-		// gunit test on line 22
-		Object retval = execParser("widget", 22, "[plugin:widget { test: 42 } /]", false);
+		// gunit test on line 21
+		Object retval = execParser("widget", 21, "[plugin:widget { test: 42 } /]", false);
 		Object actual = examineExecResult(org.antlr.gunit.gUnitParser.STRING, retval);
 		Object expecting = "[ plugin : widget { test : 42 } /]";
 
@@ -47,8 +47,8 @@ public class Testwidget extends gUnitBaseTest {
 	}
 
 	public void testWidget5() throws Exception {
-		// gunit test on line 25
-		Object retval = execParser("widget", 25, "[plugin:widget { test: 24.42 } /]", false);
+		// gunit test on line 24
+		Object retval = execParser("widget", 24, "[plugin:widget { test: 24.42 } /]", false);
 		Object actual = examineExecResult(org.antlr.gunit.gUnitParser.STRING, retval);
 		Object expecting = "[ plugin : widget { test : 24.42 } /]";
 
@@ -56,8 +56,8 @@ public class Testwidget extends gUnitBaseTest {
 	}
 
 	public void testWidget6() throws Exception {
-		// gunit test on line 28
-		Object retval = execParser("widget", 28, "[plugin:widget { test: false } /]", false);
+		// gunit test on line 27
+		Object retval = execParser("widget", 27, "[plugin:widget { test: false } /]", false);
 		Object actual = examineExecResult(org.antlr.gunit.gUnitParser.STRING, retval);
 		Object expecting = "[ plugin : widget { test : false } /]";
 
@@ -65,8 +65,8 @@ public class Testwidget extends gUnitBaseTest {
 	}
 
 	public void testWidget7() throws Exception {
-		// gunit test on line 31
-		Object retval = execParser("widget", 31, "[plugin:widget { test: true } /]", false);
+		// gunit test on line 30
+		Object retval = execParser("widget", 30, "[plugin:widget { test: true } /]", false);
 		Object actual = examineExecResult(org.antlr.gunit.gUnitParser.STRING, retval);
 		Object expecting = "[ plugin : widget { test : true } /]";
 
@@ -74,8 +74,8 @@ public class Testwidget extends gUnitBaseTest {
 	}
 
 	public void testWidget8() throws Exception {
-		// gunit test on line 34
-		Object retval = execParser("widget", 34, "[plugin:widget]testing[/]", false);
+		// gunit test on line 33
+		Object retval = execParser("widget", 33, "[plugin:widget]testing[/]", false);
 		Object actual = examineExecResult(org.antlr.gunit.gUnitParser.STRING, retval);
 		Object expecting = "[ plugin : widget ] testing [/]";
 
@@ -83,8 +83,8 @@ public class Testwidget extends gUnitBaseTest {
 	}
 
 	public void testWidget9() throws Exception {
-		// gunit test on line 37
-		Object retval = execParser("widget", 37, "[plugin:widget { test: true }]testing[/]", false);
+		// gunit test on line 36
+		Object retval = execParser("widget", 36, "[plugin:widget { test: true }]testing[/]", false);
 		Object actual = examineExecResult(org.antlr.gunit.gUnitParser.STRING, retval);
 		Object expecting = "[ plugin : widget { test : true } ] testing [/]";
 
@@ -92,8 +92,8 @@ public class Testwidget extends gUnitBaseTest {
 	}
 
 	public void testWidget10() throws Exception {
-		// gunit test on line 40
-		Object retval = execParser("widget", 40, "[plugin:widget { test: true }][plugin:widget/][/]", false);
+		// gunit test on line 39
+		Object retval = execParser("widget", 39, "[plugin:widget { test: true }][plugin:widget/][/]", false);
 		Object actual = examineExecResult(org.antlr.gunit.gUnitParser.STRING, retval);
 		Object expecting = "[ plugin : widget { test : true } ] [ plugin : widget /] [/]";
 

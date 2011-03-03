@@ -1,4 +1,4 @@
-// $ANTLR 3.3 Nov 30, 2010 12:45:30 /home/randy/Projects/widget.parser/classes/widget.g 2011-03-02 14:52:16
+// $ANTLR 3.3 Nov 30, 2010 12:45:30 /home/randy/Projects/widget.parser/Widget.g 2011-03-02 16:22:20
 
 	package org.emberfeather.widget;
 
@@ -11,7 +11,7 @@ import java.util.ArrayList;
 
 import org.antlr.runtime.tree.*;
 
-public class widgetParser extends Parser {
+public class WidgetParser extends Parser {
     public static final String[] tokenNames = new String[] {
         "<invalid>", "<EOR>", "<DOWN>", "<UP>", "ID", "WS", "STRING", "INT", "FLOAT", "'['", "':'", "'/]'", "']'", "'[/]'", "'{'", "','", "'}'", "'true'", "'false'"
     };
@@ -36,10 +36,10 @@ public class widgetParser extends Parser {
     // delegators
 
 
-        public widgetParser(TokenStream input) {
+        public WidgetParser(TokenStream input) {
             this(input, new RecognizerSharedState());
         }
-        public widgetParser(TokenStream input, RecognizerSharedState state) {
+        public WidgetParser(TokenStream input, RecognizerSharedState state) {
             super(input, state);
              
         }
@@ -53,8 +53,8 @@ public class widgetParser extends Parser {
         return adaptor;
     }
 
-    public String[] getTokenNames() { return widgetParser.tokenNames; }
-    public String getGrammarFileName() { return "/home/randy/Projects/widget.parser/classes/widget.g"; }
+    public String[] getTokenNames() { return WidgetParser.tokenNames; }
+    public String getGrammarFileName() { return "/home/randy/Projects/widget.parser/Widget.g"; }
 
 
     public static class document_return extends ParserRuleReturnScope {
@@ -63,20 +63,20 @@ public class widgetParser extends Parser {
     };
 
     // $ANTLR start "document"
-    // /home/randy/Projects/widget.parser/classes/widget.g:15:1: document : widget ;
-    public final widgetParser.document_return document() throws RecognitionException {
-        widgetParser.document_return retval = new widgetParser.document_return();
+    // /home/randy/Projects/widget.parser/Widget.g:15:1: document : widget ;
+    public final WidgetParser.document_return document() throws RecognitionException {
+        WidgetParser.document_return retval = new WidgetParser.document_return();
         retval.start = input.LT(1);
 
         Object root_0 = null;
 
-        widgetParser.widget_return widget1 = null;
+        WidgetParser.widget_return widget1 = null;
 
 
 
         try {
-            // /home/randy/Projects/widget.parser/classes/widget.g:15:9: ( widget )
-            // /home/randy/Projects/widget.parser/classes/widget.g:16:2: widget
+            // /home/randy/Projects/widget.parser/Widget.g:15:9: ( widget )
+            // /home/randy/Projects/widget.parser/Widget.g:16:2: widget
             {
             root_0 = (Object)adaptor.nil();
 
@@ -113,9 +113,9 @@ public class widgetParser extends Parser {
     };
 
     // $ANTLR start "widget"
-    // /home/randy/Projects/widget.parser/classes/widget.g:19:1: widget : ( '[' ID ':' ID ( WS )? ( arguments ( WS )? )? '/]' | '[' ID ':' ID ( WS )? ( arguments ( WS )? )? ']' content '[/]' );
-    public final widgetParser.widget_return widget() throws RecognitionException {
-        widgetParser.widget_return retval = new widgetParser.widget_return();
+    // /home/randy/Projects/widget.parser/Widget.g:19:1: widget : ( '[' ID ':' ID ( WS )? ( arguments ( WS )? )? '/]' | '[' ID ':' ID ( WS )? ( arguments ( WS )? )? ']' content '[/]' );
+    public final WidgetParser.widget_return widget() throws RecognitionException {
+        WidgetParser.widget_return retval = new WidgetParser.widget_return();
         retval.start = input.LT(1);
 
         Object root_0 = null;
@@ -135,11 +135,11 @@ public class widgetParser extends Parser {
         Token WS16=null;
         Token char_literal17=null;
         Token string_literal19=null;
-        widgetParser.arguments_return arguments7 = null;
+        WidgetParser.arguments_return arguments7 = null;
 
-        widgetParser.arguments_return arguments15 = null;
+        WidgetParser.arguments_return arguments15 = null;
 
-        widgetParser.content_return content18 = null;
+        WidgetParser.content_return content18 = null;
 
 
         Object char_literal2_tree=null;
@@ -159,12 +159,12 @@ public class widgetParser extends Parser {
         Object string_literal19_tree=null;
 
         try {
-            // /home/randy/Projects/widget.parser/classes/widget.g:19:7: ( '[' ID ':' ID ( WS )? ( arguments ( WS )? )? '/]' | '[' ID ':' ID ( WS )? ( arguments ( WS )? )? ']' content '[/]' )
+            // /home/randy/Projects/widget.parser/Widget.g:19:7: ( '[' ID ':' ID ( WS )? ( arguments ( WS )? )? '/]' | '[' ID ':' ID ( WS )? ( arguments ( WS )? )? ']' content '[/]' )
             int alt7=2;
             alt7 = dfa7.predict(input);
             switch (alt7) {
                 case 1 :
-                    // /home/randy/Projects/widget.parser/classes/widget.g:20:2: '[' ID ':' ID ( WS )? ( arguments ( WS )? )? '/]'
+                    // /home/randy/Projects/widget.parser/Widget.g:20:2: '[' ID ':' ID ( WS )? ( arguments ( WS )? )? '/]'
                     {
                     root_0 = (Object)adaptor.nil();
 
@@ -184,7 +184,7 @@ public class widgetParser extends Parser {
                     ID5_tree = (Object)adaptor.create(ID5);
                     adaptor.addChild(root_0, ID5_tree);
 
-                    // /home/randy/Projects/widget.parser/classes/widget.g:20:16: ( WS )?
+                    // /home/randy/Projects/widget.parser/Widget.g:20:16: ( WS )?
                     int alt1=2;
                     int LA1_0 = input.LA(1);
 
@@ -193,7 +193,7 @@ public class widgetParser extends Parser {
                     }
                     switch (alt1) {
                         case 1 :
-                            // /home/randy/Projects/widget.parser/classes/widget.g:20:17: WS
+                            // /home/randy/Projects/widget.parser/Widget.g:20:17: WS
                             {
                             WS6=(Token)match(input,WS,FOLLOW_WS_in_widget55); 
                             WS6_tree = (Object)adaptor.create(WS6);
@@ -205,7 +205,7 @@ public class widgetParser extends Parser {
 
                     }
 
-                    // /home/randy/Projects/widget.parser/classes/widget.g:20:22: ( arguments ( WS )? )?
+                    // /home/randy/Projects/widget.parser/Widget.g:20:22: ( arguments ( WS )? )?
                     int alt3=2;
                     int LA3_0 = input.LA(1);
 
@@ -214,7 +214,7 @@ public class widgetParser extends Parser {
                     }
                     switch (alt3) {
                         case 1 :
-                            // /home/randy/Projects/widget.parser/classes/widget.g:20:23: arguments ( WS )?
+                            // /home/randy/Projects/widget.parser/Widget.g:20:23: arguments ( WS )?
                             {
                             pushFollow(FOLLOW_arguments_in_widget60);
                             arguments7=arguments();
@@ -222,7 +222,7 @@ public class widgetParser extends Parser {
                             state._fsp--;
 
                             adaptor.addChild(root_0, arguments7.getTree());
-                            // /home/randy/Projects/widget.parser/classes/widget.g:20:33: ( WS )?
+                            // /home/randy/Projects/widget.parser/Widget.g:20:33: ( WS )?
                             int alt2=2;
                             int LA2_0 = input.LA(1);
 
@@ -231,7 +231,7 @@ public class widgetParser extends Parser {
                             }
                             switch (alt2) {
                                 case 1 :
-                                    // /home/randy/Projects/widget.parser/classes/widget.g:20:34: WS
+                                    // /home/randy/Projects/widget.parser/Widget.g:20:34: WS
                                     {
                                     WS8=(Token)match(input,WS,FOLLOW_WS_in_widget63); 
                                     WS8_tree = (Object)adaptor.create(WS8);
@@ -257,7 +257,7 @@ public class widgetParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // /home/randy/Projects/widget.parser/classes/widget.g:21:4: '[' ID ':' ID ( WS )? ( arguments ( WS )? )? ']' content '[/]'
+                    // /home/randy/Projects/widget.parser/Widget.g:21:4: '[' ID ':' ID ( WS )? ( arguments ( WS )? )? ']' content '[/]'
                     {
                     root_0 = (Object)adaptor.nil();
 
@@ -277,7 +277,7 @@ public class widgetParser extends Parser {
                     ID13_tree = (Object)adaptor.create(ID13);
                     adaptor.addChild(root_0, ID13_tree);
 
-                    // /home/randy/Projects/widget.parser/classes/widget.g:21:18: ( WS )?
+                    // /home/randy/Projects/widget.parser/Widget.g:21:18: ( WS )?
                     int alt4=2;
                     int LA4_0 = input.LA(1);
 
@@ -286,7 +286,7 @@ public class widgetParser extends Parser {
                     }
                     switch (alt4) {
                         case 1 :
-                            // /home/randy/Projects/widget.parser/classes/widget.g:21:19: WS
+                            // /home/randy/Projects/widget.parser/Widget.g:21:19: WS
                             {
                             WS14=(Token)match(input,WS,FOLLOW_WS_in_widget83); 
                             WS14_tree = (Object)adaptor.create(WS14);
@@ -298,7 +298,7 @@ public class widgetParser extends Parser {
 
                     }
 
-                    // /home/randy/Projects/widget.parser/classes/widget.g:21:24: ( arguments ( WS )? )?
+                    // /home/randy/Projects/widget.parser/Widget.g:21:24: ( arguments ( WS )? )?
                     int alt6=2;
                     int LA6_0 = input.LA(1);
 
@@ -307,7 +307,7 @@ public class widgetParser extends Parser {
                     }
                     switch (alt6) {
                         case 1 :
-                            // /home/randy/Projects/widget.parser/classes/widget.g:21:25: arguments ( WS )?
+                            // /home/randy/Projects/widget.parser/Widget.g:21:25: arguments ( WS )?
                             {
                             pushFollow(FOLLOW_arguments_in_widget88);
                             arguments15=arguments();
@@ -315,7 +315,7 @@ public class widgetParser extends Parser {
                             state._fsp--;
 
                             adaptor.addChild(root_0, arguments15.getTree());
-                            // /home/randy/Projects/widget.parser/classes/widget.g:21:35: ( WS )?
+                            // /home/randy/Projects/widget.parser/Widget.g:21:35: ( WS )?
                             int alt5=2;
                             int LA5_0 = input.LA(1);
 
@@ -324,7 +324,7 @@ public class widgetParser extends Parser {
                             }
                             switch (alt5) {
                                 case 1 :
-                                    // /home/randy/Projects/widget.parser/classes/widget.g:21:36: WS
+                                    // /home/randy/Projects/widget.parser/Widget.g:21:36: WS
                                     {
                                     WS16=(Token)match(input,WS,FOLLOW_WS_in_widget91); 
                                     WS16_tree = (Object)adaptor.create(WS16);
@@ -385,9 +385,9 @@ public class widgetParser extends Parser {
     };
 
     // $ANTLR start "arguments"
-    // /home/randy/Projects/widget.parser/classes/widget.g:24:1: arguments : '{' ( WS )? ( ( ',' )? ( WS )? arg )* ( WS )? '}' ;
-    public final widgetParser.arguments_return arguments() throws RecognitionException {
-        widgetParser.arguments_return retval = new widgetParser.arguments_return();
+    // /home/randy/Projects/widget.parser/Widget.g:24:1: arguments : '{' ( WS )? ( ( ',' )? ( WS )? arg )* ( WS )? '}' ;
+    public final WidgetParser.arguments_return arguments() throws RecognitionException {
+        WidgetParser.arguments_return retval = new WidgetParser.arguments_return();
         retval.start = input.LT(1);
 
         Object root_0 = null;
@@ -398,7 +398,7 @@ public class widgetParser extends Parser {
         Token WS23=null;
         Token WS25=null;
         Token char_literal26=null;
-        widgetParser.arg_return arg24 = null;
+        WidgetParser.arg_return arg24 = null;
 
 
         Object char_literal20_tree=null;
@@ -409,8 +409,8 @@ public class widgetParser extends Parser {
         Object char_literal26_tree=null;
 
         try {
-            // /home/randy/Projects/widget.parser/classes/widget.g:24:10: ( '{' ( WS )? ( ( ',' )? ( WS )? arg )* ( WS )? '}' )
-            // /home/randy/Projects/widget.parser/classes/widget.g:25:2: '{' ( WS )? ( ( ',' )? ( WS )? arg )* ( WS )? '}'
+            // /home/randy/Projects/widget.parser/Widget.g:24:10: ( '{' ( WS )? ( ( ',' )? ( WS )? arg )* ( WS )? '}' )
+            // /home/randy/Projects/widget.parser/Widget.g:25:2: '{' ( WS )? ( ( ',' )? ( WS )? arg )* ( WS )? '}'
             {
             root_0 = (Object)adaptor.nil();
 
@@ -418,7 +418,7 @@ public class widgetParser extends Parser {
             char_literal20_tree = (Object)adaptor.create(char_literal20);
             adaptor.addChild(root_0, char_literal20_tree);
 
-            // /home/randy/Projects/widget.parser/classes/widget.g:25:6: ( WS )?
+            // /home/randy/Projects/widget.parser/Widget.g:25:6: ( WS )?
             int alt8=2;
             int LA8_0 = input.LA(1);
 
@@ -427,7 +427,7 @@ public class widgetParser extends Parser {
             }
             switch (alt8) {
                 case 1 :
-                    // /home/randy/Projects/widget.parser/classes/widget.g:25:7: WS
+                    // /home/randy/Projects/widget.parser/Widget.g:25:7: WS
                     {
                     WS21=(Token)match(input,WS,FOLLOW_WS_in_arguments114); 
                     WS21_tree = (Object)adaptor.create(WS21);
@@ -439,7 +439,7 @@ public class widgetParser extends Parser {
 
             }
 
-            // /home/randy/Projects/widget.parser/classes/widget.g:25:12: ( ( ',' )? ( WS )? arg )*
+            // /home/randy/Projects/widget.parser/Widget.g:25:12: ( ( ',' )? ( WS )? arg )*
             loop11:
             do {
                 int alt11=2;
@@ -461,9 +461,9 @@ public class widgetParser extends Parser {
 
                 switch (alt11) {
             	case 1 :
-            	    // /home/randy/Projects/widget.parser/classes/widget.g:25:13: ( ',' )? ( WS )? arg
+            	    // /home/randy/Projects/widget.parser/Widget.g:25:13: ( ',' )? ( WS )? arg
             	    {
-            	    // /home/randy/Projects/widget.parser/classes/widget.g:25:13: ( ',' )?
+            	    // /home/randy/Projects/widget.parser/Widget.g:25:13: ( ',' )?
             	    int alt9=2;
             	    int LA9_0 = input.LA(1);
 
@@ -472,7 +472,7 @@ public class widgetParser extends Parser {
             	    }
             	    switch (alt9) {
             	        case 1 :
-            	            // /home/randy/Projects/widget.parser/classes/widget.g:25:14: ','
+            	            // /home/randy/Projects/widget.parser/Widget.g:25:14: ','
             	            {
             	            char_literal22=(Token)match(input,15,FOLLOW_15_in_arguments120); 
             	            char_literal22_tree = (Object)adaptor.create(char_literal22);
@@ -484,7 +484,7 @@ public class widgetParser extends Parser {
 
             	    }
 
-            	    // /home/randy/Projects/widget.parser/classes/widget.g:25:20: ( WS )?
+            	    // /home/randy/Projects/widget.parser/Widget.g:25:20: ( WS )?
             	    int alt10=2;
             	    int LA10_0 = input.LA(1);
 
@@ -493,7 +493,7 @@ public class widgetParser extends Parser {
             	    }
             	    switch (alt10) {
             	        case 1 :
-            	            // /home/randy/Projects/widget.parser/classes/widget.g:25:21: WS
+            	            // /home/randy/Projects/widget.parser/Widget.g:25:21: WS
             	            {
             	            WS23=(Token)match(input,WS,FOLLOW_WS_in_arguments125); 
             	            WS23_tree = (Object)adaptor.create(WS23);
@@ -520,7 +520,7 @@ public class widgetParser extends Parser {
                 }
             } while (true);
 
-            // /home/randy/Projects/widget.parser/classes/widget.g:25:33: ( WS )?
+            // /home/randy/Projects/widget.parser/Widget.g:25:33: ( WS )?
             int alt12=2;
             int LA12_0 = input.LA(1);
 
@@ -529,7 +529,7 @@ public class widgetParser extends Parser {
             }
             switch (alt12) {
                 case 1 :
-                    // /home/randy/Projects/widget.parser/classes/widget.g:25:34: WS
+                    // /home/randy/Projects/widget.parser/Widget.g:25:34: WS
                     {
                     WS25=(Token)match(input,WS,FOLLOW_WS_in_arguments135); 
                     WS25_tree = (Object)adaptor.create(WS25);
@@ -572,9 +572,9 @@ public class widgetParser extends Parser {
     };
 
     // $ANTLR start "arg"
-    // /home/randy/Projects/widget.parser/classes/widget.g:28:1: arg : ID ':' ( WS )? value ;
-    public final widgetParser.arg_return arg() throws RecognitionException {
-        widgetParser.arg_return retval = new widgetParser.arg_return();
+    // /home/randy/Projects/widget.parser/Widget.g:28:1: arg : ID ':' ( WS )? value ;
+    public final WidgetParser.arg_return arg() throws RecognitionException {
+        WidgetParser.arg_return retval = new WidgetParser.arg_return();
         retval.start = input.LT(1);
 
         Object root_0 = null;
@@ -582,7 +582,7 @@ public class widgetParser extends Parser {
         Token ID27=null;
         Token char_literal28=null;
         Token WS29=null;
-        widgetParser.value_return value30 = null;
+        WidgetParser.value_return value30 = null;
 
 
         Object ID27_tree=null;
@@ -590,8 +590,8 @@ public class widgetParser extends Parser {
         Object WS29_tree=null;
 
         try {
-            // /home/randy/Projects/widget.parser/classes/widget.g:28:4: ( ID ':' ( WS )? value )
-            // /home/randy/Projects/widget.parser/classes/widget.g:29:2: ID ':' ( WS )? value
+            // /home/randy/Projects/widget.parser/Widget.g:28:4: ( ID ':' ( WS )? value )
+            // /home/randy/Projects/widget.parser/Widget.g:29:2: ID ':' ( WS )? value
             {
             root_0 = (Object)adaptor.nil();
 
@@ -603,7 +603,7 @@ public class widgetParser extends Parser {
             char_literal28_tree = (Object)adaptor.create(char_literal28);
             adaptor.addChild(root_0, char_literal28_tree);
 
-            // /home/randy/Projects/widget.parser/classes/widget.g:29:9: ( WS )?
+            // /home/randy/Projects/widget.parser/Widget.g:29:9: ( WS )?
             int alt13=2;
             int LA13_0 = input.LA(1);
 
@@ -612,7 +612,7 @@ public class widgetParser extends Parser {
             }
             switch (alt13) {
                 case 1 :
-                    // /home/randy/Projects/widget.parser/classes/widget.g:29:10: WS
+                    // /home/randy/Projects/widget.parser/Widget.g:29:10: WS
                     {
                     WS29=(Token)match(input,WS,FOLLOW_WS_in_arg154); 
                     WS29_tree = (Object)adaptor.create(WS29);
@@ -657,9 +657,9 @@ public class widgetParser extends Parser {
     };
 
     // $ANTLR start "value"
-    // /home/randy/Projects/widget.parser/classes/widget.g:32:1: value : ( STRING | INT | FLOAT | ( 'true' | 'false' ) );
-    public final widgetParser.value_return value() throws RecognitionException {
-        widgetParser.value_return retval = new widgetParser.value_return();
+    // /home/randy/Projects/widget.parser/Widget.g:32:1: value : ( STRING | INT | FLOAT | ( 'true' | 'false' ) );
+    public final WidgetParser.value_return value() throws RecognitionException {
+        WidgetParser.value_return retval = new WidgetParser.value_return();
         retval.start = input.LT(1);
 
         Object root_0 = null;
@@ -669,8 +669,8 @@ public class widgetParser extends Parser {
         Object set31_tree=null;
 
         try {
-            // /home/randy/Projects/widget.parser/classes/widget.g:32:6: ( STRING | INT | FLOAT | ( 'true' | 'false' ) )
-            // /home/randy/Projects/widget.parser/classes/widget.g:
+            // /home/randy/Projects/widget.parser/Widget.g:32:6: ( STRING | INT | FLOAT | ( 'true' | 'false' ) )
+            // /home/randy/Projects/widget.parser/Widget.g:
             {
             root_0 = (Object)adaptor.nil();
 
@@ -712,26 +712,26 @@ public class widgetParser extends Parser {
     };
 
     // $ANTLR start "content"
-    // /home/randy/Projects/widget.parser/classes/widget.g:39:1: content : ( widget | ( . )* );
-    public final widgetParser.content_return content() throws RecognitionException {
-        widgetParser.content_return retval = new widgetParser.content_return();
+    // /home/randy/Projects/widget.parser/Widget.g:39:1: content : ( widget | ( . )* );
+    public final WidgetParser.content_return content() throws RecognitionException {
+        WidgetParser.content_return retval = new WidgetParser.content_return();
         retval.start = input.LT(1);
 
         Object root_0 = null;
 
         Token wildcard33=null;
-        widgetParser.widget_return widget32 = null;
+        WidgetParser.widget_return widget32 = null;
 
 
         Object wildcard33_tree=null;
 
         try {
-            // /home/randy/Projects/widget.parser/classes/widget.g:39:8: ( widget | ( . )* )
+            // /home/randy/Projects/widget.parser/Widget.g:39:8: ( widget | ( . )* )
             int alt15=2;
             alt15 = dfa15.predict(input);
             switch (alt15) {
                 case 1 :
-                    // /home/randy/Projects/widget.parser/classes/widget.g:40:2: widget
+                    // /home/randy/Projects/widget.parser/Widget.g:40:2: widget
                     {
                     root_0 = (Object)adaptor.nil();
 
@@ -745,11 +745,11 @@ public class widgetParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // /home/randy/Projects/widget.parser/classes/widget.g:41:4: ( . )*
+                    // /home/randy/Projects/widget.parser/Widget.g:41:4: ( . )*
                     {
                     root_0 = (Object)adaptor.nil();
 
-                    // /home/randy/Projects/widget.parser/classes/widget.g:41:4: ( . )*
+                    // /home/randy/Projects/widget.parser/Widget.g:41:4: ( . )*
                     loop14:
                     do {
                         int alt14=2;
@@ -765,7 +765,7 @@ public class widgetParser extends Parser {
 
                         switch (alt14) {
                     	case 1 :
-                    	    // /home/randy/Projects/widget.parser/classes/widget.g:41:4: .
+                    	    // /home/randy/Projects/widget.parser/Widget.g:41:4: .
                     	    {
                     	    wildcard33=(Token)input.LT(1);
                     	    matchAny(input); 

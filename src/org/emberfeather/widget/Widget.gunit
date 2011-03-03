@@ -1,10 +1,9 @@
-gunit widget;
+gunit Widget;
 
 @header {
   package org.emberfeather.widget;
 }
 
-// Test Rule: Variable closing
 widget:
 	// Normal vanilla widget
 	"[plugin:func/]" -> "[ plugin : func /]"

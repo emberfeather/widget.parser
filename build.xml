@@ -45,8 +45,8 @@
 		
 		<!-- Create the paths -->
 		<path id="classpath.lib">
-			<pathelement location="lib${file.separator}antlr-3.2.jar"/>
-			<pathelement location="lib${file.separator}junit-4.8.2.jar"/>
+			<pathelement location="lib${file.separator}antlr.jar"/>
+			<pathelement location="lib${file.separator}junit.jar"/>
 		</path>
 		
 		<path id="classpath.bin.src">
@@ -99,7 +99,7 @@
 			
 			<arg value="-o"/>
 			
-			<arg value="widget.gunit"/>
+			<arg value="Widget.gunit"/>
 		</java>
 		
 		<echo message="Finished: Generate Tests"/>
@@ -113,7 +113,7 @@
 			<classpath refid="classpath.lib"/>
 			<classpath refid="classpath.bin.src"/>
 			
-			<arg value="src${file.separator}${build.dist.package}${file.separator}widget.gunit"/>
+			<arg value="src${file.separator}${build.dist.package}${file.separator}Widget.gunit"/>
 		</java>
 		
 		<echo message="Finished: gUnit Tests"/>
