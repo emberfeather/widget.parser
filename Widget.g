@@ -17,16 +17,16 @@ document:
 	;
 
 widget:
-	'[' ID ':' ID (WS)? (arguments (WS)?)? '/]'
-	| '[' ID ':' ID (WS)? (arguments (WS)?)? ']' content '[/]'
+	'['! ID^ ':'! ID (WS)? (arguments (WS)?)? '/]'!
+	| '['! ID^ ':'! ID (WS)? (arguments (WS)?)? ']'! content '[/]'!
 	;
 
 arguments:
-	'{' (WS)? ((',')? (WS)? arg )* (WS)? '}'
+	'{'! (WS)? ((','!)? (WS)? arg )* (WS)? '}'!
 	;
 
 arg:
-	ID ':' (WS)? value
+	ID^ ':'! (WS)? value
 	;
 
 value:

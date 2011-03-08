@@ -6,34 +6,37 @@ gunit Widget;
 
 widget:
 	// Normal vanilla widget
-	"[plugin:func/]" -> "[ plugin : func /]"
+	"[plugin:func/]" -> (plugin func)
 	
 	// Normal vanilla widget with space
-	"[plugin:widget /]" -> "[ plugin : widget /]"
+	"[plugin:widget /]" -> (plugin widget)
 	
 	// Simple string argument
-	"[plugin:widget { test: 'ok' } /]" -> "[ plugin : widget { test : 'ok' } /]"
+	"[plugin:widget { test: 'ok' } /]" -> (plugin widget (test 'ok'))
 	
 	// Simple string argument
-	//"[plugin:widget { test: \"ok\" } /]" -> "[ plugin : widget { test : \"ok\" } /]"]
+	"[plugin:widget { test: \"ok\" } /]" -> (plugin widget (test "\"ok\""))
 	
 	// Simple numeric argument
-	"[plugin:widget { test: 42 } /]" -> "[ plugin : widget { test : 42 } /]"
+	"[plugin:widget { test: 42 } /]" -> (plugin widget (test 42))
 	
 	// Simple decimal argument
-	"[plugin:widget { test: 24.42 } /]" -> "[ plugin : widget { test : 24.42 } /]"
+	"[plugin:widget { test: 24.42 } /]" -> (plugin widget (test 24.42))
 	
 	// Simple false argument
-	"[plugin:widget { test: false } /]" -> "[ plugin : widget { test : false } /]"
+	"[plugin:widget { test: false } /]" -> (plugin widget (test false))
 	
 	// Simple true argument
-	"[plugin:widget { test: true } /]" -> "[ plugin : widget { test : true } /]"
+	"[plugin:widget { test: true } /]" -> (plugin widget (test true))
+	
+	// Multiple arguments
+	"[plugin:widget { test: true, other: false } /]" -> (plugin widget (test true) (other false))
 	
 	// Normal widget with content
-	"[plugin:widget]testing[/]" -> "[ plugin : widget ] testing [/]"
+	"[plugin:widget]testing[/]" -> (plugin widget testing)
 	
 	// Normal widget with content
-	"[plugin:widget { test: true }]testing[/]" -> "[ plugin : widget { test : true } ] testing [/]"
+	"[plugin:widget { test: true }]testing[/]" -> (plugin widget (test true) testing)
 	
 	// Normal widget with content
-	"[plugin:widget { test: true }][plugin:widget/][/]" -> "[ plugin : widget { test : true } ] [ plugin : widget /] [/]"
+	"[plugin:widget { test: true }][plugin:widget/][/]" -> (plugin widget (test true) (plugin widget))
